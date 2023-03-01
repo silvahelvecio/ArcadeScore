@@ -1,0 +1,23 @@
+
+  
+ <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Ranking - Maiores Pontuaçoes </h5>
+                    <h6 class="card-footer mb-1 text-muted">
+                    <table class="table">
+                    <tbody>
+                        <tr *ngFor="let temp of ranking; index as i">
+                            <td>{{ i+1 }}.  {{ temp.nome }}</td>
+                            <td>{{ temp.pontos }} pontos</td>
+                            <td id= "{{ temp.id + '--' + temp.nome }}" (click)="onClick($event)" style="cursor: pointer;font-weight: bold;">Estatística</td>
+                        </tr>
+                    </tbody>
+                    </table></h6>
+                </div>
+            </div>
+        </div>    
+    </div>
+</div>    

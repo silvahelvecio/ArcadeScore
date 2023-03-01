@@ -1,0 +1,38 @@
+
+<div class="container" style="margin-top: 70px;">
+    <h4 class="card-title">Registrar Pontuação</h4>
+    <br>
+    <form class = 'card p-1'>
+        <br>
+        <div class="row mb-3">
+            <label for="data" class="col-sm-2 col-form-label">Data da Partida:</label>
+            <div class="col-sm-3">
+                <input type="date" [(ngModel)]="pontuacao.data" name="data" class="form-control" />
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label for="pontos" class="col-sm-2 col-form-label">Pontuação:</label>
+            <div class="col-sm-3">
+                <input [(ngModel)]="pontuacao.pontos" type="number" name="pontos" class="form-control" id="pontos" min="1" maxlength="5">
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label for="Jogador" class="col-sm-2 col-form-label">Jogador:</label>
+            <div class="col-sm-5">
+                    <select class="form-control" [(ngModel)]="pontuacao.jogadorId" name="jogadorId" >
+                        <option *ngFor="let jogador of jogadores" [ngValue]="jogador.id">{{jogador.nome}}</option>
+                    </select>
+             </div>
+        </div>
+      
+        <div class="row">
+            <div class="col-sm-10 offset-sm-2">
+                <button (click)="salvar()" class="btn btn-primary">Salvar</button>
+            </div>
+        </div>
+        <br>
+        <hr/>
+    </form>
+</div>

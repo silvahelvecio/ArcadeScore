@@ -1,21 +1,23 @@
+    
+    
+    
     <div class="modal-dialog">
       <div class="modal-content">
          <div class="modal-header">
-          <h4 class="modal-title">Estatística Jogador - {{nomejogador}} </h4>
+          <h4 class="modal-title">Estatística {{nomejogador}} </h4>
         </div>
         <div class="modal-body" *ngIf="estatistica[0] != undefined">
-            <p class="border-bottom">Partidas Jogadas.................................: {{estatistica[0].partidasJogadas}}</p>
-            <p class="border-bottom">Média de pontuação.........................: {{estatistica[0].mediaPontuacao}}</p>
-            <p class="border-bottom">Maior pontuação................................: {{estatistica[0].maiorPontuacao}}</p>
-            <p class="border-bottom">Menor pontuação................................: {{estatistica[0].menorPontuacao}}</p>
+            <p class="border-bottom">Partidas Jogadas: {{estatistica[0].partidasJogadas}}</p>
+            <p class="border-bottom">Média de pontuação: {{estatistica[0].mediaPontuacao}}</p>
+            <p class="border-bottom">Maior pontuação: {{estatistica[0].maiorPontuacao}}</p>
+            <p class="border-bottom">Menor pontuação: {{estatistica[0].menorPontuacao}}</p>
             <p class="border-bottom">Vezes que bateu o próprio record: {{estatistica[0].qtdeVezesRecord}}</p>
-            <p class="border-bottom">Tempo que joga...................................: {{estatistica[0].tempoJoga}} mes(es)</p>
+            <p class="border-bottom">Tempo que joga: {{estatistica[0].tempoJoga}} mes(es)</p>
         </div>       
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+          <button type="button" class="btn btn-primary" aria-label="Fechar" (click)="activeModal.dismiss('Cross click')">
              <span aria-hidden="true">Close</span>
         </button>
         </div>
       </div>
     </div>
-  
